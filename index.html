@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/styles/reset.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./assets/styles/styles.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="app-main">
+            <div class="app-container open">
+                <header class="app-header">
+                    <div class="title">
+                        <h1 class="title__heading">Quiz App</h1>
+                        <p class="title__sub-heading">Programming</p>
+                    </div>
+                    <div class="option">
+                        <div class="option__setting">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <div class="option__rank">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                    </div>
+                </header>
+                <div class="app-body">
+                    <section id="html" class="card-category html">
+                        <div class="card-category__logo">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div class="quiz-category">
+                            <h2 class="quiz-category__title">HTML</h2>
+                            <p class="quiz-category__sub-title">easy</p>
+                        </div>
+                    </section>
+                    <section id="javascript" class="card-category js">
+                        <div class="card-category__logo">
+                            <i class="fa-brands fa-square-js"></i>
+                        </div>
+                        <div class="quiz-category">
+                            <h2 class="quiz-category__title">JavaScript</h2>
+                            <p class="quiz-category__sub-title">easy</p>
+                        </div>
+                    </section>
+                    <section id="php" class="card-category php">
+                        <div class="card-category__logo">
+                            <i class="fa-brands fa-php"></i>
+                        </div>
+                        <div class="quiz-category">
+                            <h2 class="quiz-category__title">PHP</h2>
+                            <p class="quiz-category__sub-title">easy</p>
+                        </div>
+                    </section>
+                    <section id="linux" class="card-category linux">
+                        <div class="card-category__logo">
+                            <i class="fa-brands fa-linux"></i>
+                        </div>
+                        <div class="quiz-category">
+                            <h2 class="quiz-category__title">Linux</h2>
+                            <p class="quiz-category__sub-title">easy</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="app-questions">
+                <header class="header">
+                    <div class="header-top">
+                        <div class="back">
+                            <i class="fa-solid fa-circle-left"></i>
+                        </div>
+                        <div class="title">
+                            <h2 class="title__question">HTML</h2>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-solid fa-heart"></i
+                            ><i class="fa-solid fa-heart"></i
+                            ><i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="header-bottom">
+                        <progress id="progress" value="1" max="5"></progress>
+                    </div>
+                </header>
+                <div class="box-question">
+                    <div class="questions">
+                        <div class="question">
+                            <h3>question?</h3>
+                        </div>
+                        <div class="answers">
+                            <input
+                                type="button"
+                                value="${answer_a}"
+                                data-correct="${element.correct_answers.answer_a_correct}"
+                                class="answer correct"
+                            />
+                            <input
+                                type="button"
+                                value="${answer_b}"
+                                data-correct="${element.correct_answers.answer_b_correct}"
+                                class="answer wrong"
+                            />
+                            <input
+                                type="button"
+                                value="${answer_c}"
+                                data-correct="${element.correct_answers.answer_c_correct}"
+                                class="answer"
+                            />
+                            <input
+                                type="button"
+                                value="${answer_d}"
+                                data-correct="${element.correct_answers.answer_d_correct}"
+                                class="answer"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-congratulations">
+                <div class="bg-congratulations">
+                    <img src="./assets/images/bg.png" alt="" />
+                </div>
+                <div class="icon">
+                    <img src="./assets/images/pngegg.png" alt="" srcset="" />
+                </div>
+                <div class="score"><h1>${score} score</h1></div>
+                <div class="back-home">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./assets/scripts/script.js"></script>
+</html>

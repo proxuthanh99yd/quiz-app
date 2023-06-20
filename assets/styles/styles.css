@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+.app-main {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 425px;
+  max-width: calc(100vw - 20px);
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  height: 100vh;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(180deg, rgb(167, 112, 239), rgb(207, 139, 243), rgb(253, 185, 155));
+  position: relative;
+}
+.app-main .app-container {
+  transition: 0.3s ease;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  height: 100vh;
+  width: 425px;
+  max-width: calc(100vw - 20px);
+  position: absolute;
+}
+.app-main .app-container .app-header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  border-radius: 10px;
+}
+.app-main .app-container .app-header .title {
+  margin-top: 40px;
+}
+.app-main .app-container .app-header .title__heading {
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #231e1e;
+}
+.app-main .app-container .app-header .title__sub-heading {
+  font-size: 1.6rem;
+  margin: 3px 10px;
+  color: #636262;
+}
+.app-main .app-container .app-header .option {
+  margin-top: 10px;
+  font-size: 2.6rem;
+}
+.app-main .app-container .app-header .option__setting {
+  color: brown;
+  transition: all 0.3s ease;
+}
+.app-main .app-container .app-header .option__setting:hover {
+  transform: scale(1.1) rotate(180deg);
+}
+.app-main .app-container .app-header .option__rank {
+  margin-top: 10px;
+  margin-left: -2px;
+  color: goldenrod;
+  transition: all 0.3s ease;
+}
+.app-main .app-container .app-header .option__rank:hover {
+  transform: scale(1.1);
+}
+.app-main .app-container .app-body {
+  margin-top: 20px;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  padding: 10px;
+  border-radius: 10px;
+}
+.app-main .app-container .app-body .card-category {
+  margin: 10px;
+  display: flex;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid rgb(253, 185, 155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.app-main .app-container .app-body .card-category:hover {
+  transform: translateX(3%);
+  background: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+}
+.app-main .app-container .app-body .card-category__logo {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 4.2rem;
+  line-height: 60px;
+}
+.app-main .app-container .app-body .card-category .quiz-category {
+  padding: 10px;
+}
+.app-main .app-container .app-body .card-category .quiz-category__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.app-main .app-container .app-body .card-category .quiz-category__sub-title {
+  color: #636262;
+}
+.app-main .app-container .app-body .card-category.html .card-category__logo {
+  color: #fff;
+  border-radius: 8px;
+  background: orangered;
+}
+.app-main .app-container .app-body .card-category.js .card-category__logo {
+  color: #f0dc4e;
+  border-radius: 8px;
+  background: #2e302c;
+}
+.app-main .app-container .app-body .card-category.php .card-category__logo {
+  background: #6075bc;
+  border-radius: 8px;
+  color: #f2f2f2;
+}
+.app-main .app-container .app-body .card-category.linux .card-category__logo {
+  color: #000000;
+  border-radius: 8px;
+  background: #ffbc00;
+}
+.app-main .app-container.open {
+  transform: translate(-50%, -50%);
+}
+.app-main .app-questions.open {
+  transform: translate(-50%, -50%);
+}
+.app-main .app-questions {
+  transition: 0.3s ease;
+  padding: 10px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+  height: 100vh;
+  width: 425px;
+  max-width: calc(100vw - 20px);
+  position: absolute;
+}
+.app-main .app-questions .header {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  border-radius: 10px;
+}
+.app-main .app-questions .header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.app-main .app-questions .header .header-top .back {
+  font-size: 2.6rem;
+  color: orangered;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.app-main .app-questions .header .header-top .back:hover {
+  transform: scale(1.1);
+}
+.app-main .app-questions .header .header-top .heart {
+  font-size: 2rem;
+  color: orangered;
+}
+.app-main .app-questions .header .header-top .heart i {
+  transition: all 1s ease;
+}
+.app-main .app-questions .header .header-top .heart i.hidden {
+  opacity: 0;
+  transform: scale(0.3);
+}
+.app-main .app-questions .header .header-top .title__question {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.app-main .app-questions .header .header-bottom {
+  padding: 0px 20px 10px 20px;
+}
+.app-main .app-questions .header .header-bottom #progress {
+  width: 100%;
+  accent-color: rgb(98, 255, 0);
+}
+.app-main .app-questions .box-question {
+  position: relative;
+}
+.app-main .app-questions .box-question .questions.before {
+  transform: translateX(-205%) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.app-main .app-questions .box-question .questions.after {
+  transform: translateX(-100%);
+  opacity: 1;
+  visibility: visible;
+}
+.app-main .app-questions .box-question .questions {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  transform: translateX(5%);
+  position: absolute;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+  transition: 0.3s ease;
+}
+.app-main .app-questions .box-question .questions .question {
+  padding: 10px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  border: 2px solid #6075bc;
+  border-radius: 10px;
+}
+.app-main .app-questions .box-question .questions .answers {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.app-main .app-questions .box-question .questions .answers .answer {
+  white-space: normal;
+  background: #f2f2f2;
+  margin-top: 15px;
+  min-height: 50px;
+  border: transparent;
+  box-shadow: 0px 2px 2px 1px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.app-main .app-questions .box-question .questions .answers .answer:hover {
+  background: #636262;
+  color: #f2f2f2;
+  transform: scaleX(1.05);
+}
+.app-main .app-questions .box-question .questions .answers .answer.correct {
+  color: #b5fffc;
+  background: rgb(3, 255, 16);
+  transform: scaleX(1.05);
+}
+.app-main .app-questions .box-question .questions .answers .answer.wrong {
+  color: #b5fffc;
+  background: red;
+  transform: scaleX(1.05);
+}
+.app-main .app-congratulations.open {
+  transform: translate(-50%, -50%);
+}
+.app-main .app-congratulations {
+  transition: 0.3s ease;
+  padding: 10px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+  height: 100vh;
+  width: 425px;
+  max-width: calc(100vw - 20px);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.app-main .app-congratulations .bg-congratulations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.app-main .app-congratulations .bg-congratulations img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.app-main .app-congratulations .icon img {
+  width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.app-main .app-congratulations .score h1 {
+  text-align: center;
+  font-family: "Bagel Fat One", cursive;
+  font-size: 5rem;
+  font-weight: 400;
+  color: rgb(255, 238, 0);
+}
+.app-main .app-congratulations .back-home {
+  font-size: 4.6rem;
+  color: #636262;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+.app-main .app-congratulations .back-home:hover {
+  color: #6075bc;
+  transform: scale(1.1);
+}
+
+.loader {
+  margin: 40px auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=styles.css.map */
